@@ -81,9 +81,7 @@ class HomeSplash extends React.Component {
           <ProjectTitle />
           <ButtonGroup>
             {[
-              {href: 'qq', text: '加入QQ群1'},
-              {href: 'qq', text: '加入QQ群2'},
-              {href: 'qq', text: '加入QQ群2'}
+              {text: '加入QQ群', title: '群号: 674264017', target: '_blank', href: 'http://shang.qq.com/wpa/qunwpa?idkey=c36b92f02329b7d2f6510dc351a74becf602835956d57e8a92d229885673c310'}
             ]}
           </ButtonGroup>
         </div>
@@ -120,63 +118,157 @@ const Pay = props => (
     id="pay"
     background="light">
     <div class="donate"><h2>捐赠</h2></div>
+    <div class="donate-content"><h3>项目的发展离不开你的支持，请作者喝杯咖啡吧！</h3></div>
     <GridBlock align="center" contents={[
       {
-        //content: '微信二维码',
         image: imgUrl('wx_pay.png'),
         imageAlign: 'top',
         title: '微信二维码',
       },
       {
-        //content: '支付宝二维码',
         image: imgUrl('ali_pay.png'),
         imageAlign: 'top',
         title: '支付宝二维码',
       },
-    ]} layout="fourColumn" className="ewm pay"/>
+    ]} layout="twoColumn" className="ewm pay"/>
     <div class="donate-list"><Button href="" target="_blank">捐赠列表</Button></div>
   </Container>
 );
 
-const OList = props => {
-  return (
-    <ol class={props.className} id={props.id}>
-      {props.children.map(val => {
-        return (
-          <li><a href={val.href} target="_blank">{val.text}</a></li>
-        );
-      })}
-    </ol>
-  );
-}
-
 const Blog = props => {
-  var blogList = (<OList id="blog">
-        {[{
-          text:"深入了解 MyBatis 参数",
-          href:""
-        },{
-          text:"深入了解 MyBatis 返回值",
-          href:""
-        }]}
-      </OList>);
-  console.log(blogList);
   return (
     <Container
       padding={['bottom', 'top']}
       id="blog">
-      <div class="donate"><h2>推荐阅读文章</h2></div>
+      <div class="blog-recommend"><h2>推荐阅读文章</h2></div>
       <GridBlock align="center" contents={[
         {
-          content: {blogList}
+          content: '[深入了解 MyBatis 参数](http://blog.csdn.net/isea533/article/details/44002219)'
+        },{
+          content: '[MyBatis-Spring 配置简单了解](http://blog.csdn.net/isea533/article/details/45640319)'
+        },{
+          content: '[深入了解 MyBatis 返回值](http://blog.csdn.net/isea533/article/details/46442067)'
+        },{
+          content: '[Mybatis Geneator 详解](http://blog.csdn.net/isea533/article/details/42102297)'
+        },{
+          content: '[MyBatis 问题集](http://blog.csdn.net/column/details/mybatisqa.html)'
+        },{
+          content: '[MyBatis Geneator 中文文档](http://mbg.cndocs.tk/)'
+        },{
+          content: '[MyBatis 示例](http://blog.csdn.net/column/details/mybatis-sample.html)'
+        },{
+          content: ''
         },
-        {
-          content: '微信二维码',
-          //title: '支付宝二维码',
-        },
-      ]} layout="fourColumn" className="ewm pay"/>
-      <div class="donate-list"><Button href="" target="_blank">捐赠列表</Button></div>
+      ]} layout="twoColumn" className="blog"/>
     </Container>
+  );
+}
+
+const LibInfo = props => {
+  var href = "https://maven-badges.herokuapp.com/maven-central/" + props.ga;
+  var imgSrc = href + "/badge.svg";
+  return (
+    <Container
+      padding={['bottom', 'top']}
+      background={props.background}
+      id={props.id}>
+      <div class="lib-title"><h2>{props.title}</h2></div>
+      <div class="version">
+        <div class="version-title"><h4>当前版本</h4></div>
+        <div class="version-img">
+          <a href={href}>
+          <img src={imgSrc} alt="Maven central"/></a>
+          </div>
+      </div>
+      <GridBlock align="center" contents={props.children} layout={props.layout} className={props.id}/>
+    </Container>
+  );
+}
+
+const MyBatis = props => {
+  return (
+    <LibInfo id="mybatis" title="MyBatis 官方内容" 
+             ga="org.mybatis/mybatis" layout="threeColumn"
+             background="light">
+      {[
+        {
+          title: '[源码地址](https://github.com/mybatis/mybatis-3)',
+          content: '想要更近一步，尝试看看源码'
+        },{
+          title: '[官方文档](http://mybatis.github.io/mybatis-3/index.html)',
+          content: '如果使用最新版本，建议看英文文档，中文文档也推荐看'
+        },{
+          title: '[MyBatis Spring 官方文档](https://mybatis.github.io/spring/index.html)',
+          content: '和 Spring 集成的文档，包含很多细节'
+        },
+      ]}
+    </LibInfo>
+  );
+}
+
+const MyBatisBoot = props => {
+  return (
+    <LibInfo id="mybatis" title="Spring Boot Support for MyBatis" 
+             ga="org.mybatis.spring.boot/mybatis-spring-boot" layout="threeColumn">
+      {[
+        {
+          title: '[源码地址](https://github.com/mybatis/spring-boot-starter)',
+        },{
+          title: '[官方文档](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)',
+        },{
+          title: '[快速开始](https://github.com/mybatis/spring-boot-starter/wiki/Quick-Start)',
+        },
+      ]}
+    </LibInfo>
+  );
+}
+
+const PageHelper = props => {
+  return (
+    <LibInfo id="pagehelper" title="分页插件 PageHelper" 
+             ga="com.github.pagehelper/pagehelper" layout="threeColumn"
+             background="light">
+      {[
+        {
+          title: '源码地址 [GitHub](https://github.com/pagehelper/Mybatis-PageHelper) && [Gitee](https://gitee.com/free/Mybatis_PageHelper)',
+          content: '两个仓库数据同步，可以根据自己的需要选择，同时支持 issue 和 pr'
+        },{
+          title: '[如何使用?](https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/HowToUse.md)',
+          content: '循序渐进，一步一步配置分页插件'
+        },{
+          title: '[更新日志](https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/Changelog.md)',
+          content: '更新日志中包含了很多还没有完善到文档中的功能，使用遇到的问题时，可以先在更新日志查看'
+        }
+      ]}
+    </LibInfo>
+  );
+}
+
+const Mapper = props => {
+  return (
+    <LibInfo id="mapper" title="通用 Mapper" ga="tk.mybatis/mapper" layout="threeColumn">
+      {[
+        {
+          title: '源码地址 [GitHub](https://github.com/abel533/Mapper) && [Gitee](https://gitee.com/free/Mapper)',
+          content: '两个仓库数据同步，可以根据自己的需要选择，同时支持 issue 和 pr'
+        },{
+          title: '[官方文档](https://github.com/abel533/Mapper/wiki)',
+          content: '文档非常全面，使用时注意查看文档'
+        },{
+          title: '[集成通用 Mapper](https://github.com/abel533/Mapper/wiki/1.integration)',
+          content: 'Java 编码方式集成 && Spring 集成 && Spring Boot 集成'
+        },{
+          title: '[对象关系映射](https://github.com/abel533/Mapper/wiki/2.orm)',
+          content: '通用 Mapper 使用 JPA 注解和自己提供的注解来实现对象关系映射，由于本章包含了很多细节，所以通过简单的示例先引领入门，然后在一步步深入去看详细的配置。'
+        },{
+          title: '[配置介绍](https://github.com/abel533/Mapper/wiki/3.config)',
+          content: '由于数据库存在各种各样的差异，因此有些时候要做一些必要的配置。此外通用 Mapper 还提供了一些控制参数和一些和主键策略相关的参数。'
+        },{
+          title: '[常见问题](https://github.com/abel533/Mapper/wiki/faq)',
+          content: '遇到任何问题请先看这里'
+        }
+      ]}
+    </LibInfo>
   );
 }
 
@@ -339,8 +431,12 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Book/>
+          <PageHelper/>
+          <Mapper/>
           <Pay/>
           <Blog/>
+          <MyBatis/>
+          <MyBatisBoot/>
 		      <FeatureCallout src={imgUrl('wxgzh.jpg')}/>
           <LearnHow />
           <TryOut />

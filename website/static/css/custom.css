@@ -46,6 +46,30 @@
     font-size: 200%;
 }
 
+.container .wrapper .donate-content h3 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
 .container .wrapper .donate-list {
 	text-align: center;
+}
+
+/* blog */
+.container .wrapper .blog-recommend h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+/* lib */
+.container .wrapper .lib-title h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+}
+.container .wrapper .version {
+    text-align: center;
+    /*font-weight: bold;*/
+    /*font-size: 200%;*/
 }
