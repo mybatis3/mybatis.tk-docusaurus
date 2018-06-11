@@ -34,55 +34,51 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
+            <h5>文档</h5>
+            <a href="https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/HowToUse.md" target="_blank">
+              如何使用分页插件?
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
+            <a href="https://github.com/abel533/Mapper/wiki" target="_blank">
+              如何使用通用 Mapper?
             </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
-              API Reference (or other categories)
+            <a href="http://mybatis.github.io/mybatis-3/index.html" target="_blank">
+              MyBatis 文档
             </a>
-          </div>
-          <div>
-            <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
+            <a href="http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/" target="_blank">
+              MyBatis Starter 文档
             </a>
-            <a
-              href="http://stackoverflow.com/questions/tagged/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Stack Overflow
-            </a>
-            <a href="https://discordapp.com/">Project Chat</a>
-            <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Twitter
+            <a href="https://mybatis.github.io/spring/index.html" target="_blank">
+              MyBatis Spring 文档
             </a>
           </div>
           <div>
-            <h5>More</h5>
-            <a href={this.props.config.baseUrl + 'blog'}>Blog</a>
-            <a href="https://github.com/">GitHub</a>
-            <a
-              className="github-button"
-              href={this.props.config.repoUrl}
-              data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
-              data-show-count={true}
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
-              Star
+            <h5>社区</h5>
+            <a href="http://shang.qq.com/wpa/qunwpa?idkey=c36b92f02329b7d2f6510dc351a74becf602835956d57e8a92d229885673c310" target="_blank">
+              加入 QQ 群
+            </a>
+            <a href="https://gitter.im/mybatis-3/Lobby" target="_blank">
+              Chat On Gitter
+            </a>
+            <a href="https://github.com/mybatis-book/book/issues" target="_blank">
+              GitHub Issue
+            </a>
+            <a href="http://tieba.baidu.com/f?kw=mybatis" target="_blank">
+              贴吧
+            </a>
+          </div>
+          <div>
+            <h5>更多</h5>
+            <a href="https://blog.csdn.net/isea533" target="_blank">
+              偶尔记一下
+            </a>
+            <a href="https://github.com/abel533" target="_blank">
+              GitHub
             </a>
           </div>
         </section>
-
         <a
           href="https://code.facebook.com/projects/"
+          style={{display:"none"}}
           target="_blank"
           rel="noreferrer noopener"
           className="fbOpenSource">

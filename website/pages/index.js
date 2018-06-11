@@ -92,7 +92,6 @@ class HomeSplash extends React.Component {
 
 class ButtonGroup extends React.Component {
   render() {
-    console.log('groups:' + this.props.children);
     return (
       <PromoSection>
         {this.props.children.map((v, i) => {
@@ -131,7 +130,7 @@ const Pay = props => (
         title: '支付宝二维码',
       },
     ]} layout="twoColumn" className="ewm pay"/>
-    <div class="donate-list"><Button href="" target="_blank">捐赠列表</Button></div>
+    <div class="donate-list"><Button href={siteConfig.baseUrl + "donates.html"} target="_blank">捐赠列表</Button></div>
   </Container>
 );
 
@@ -368,7 +367,7 @@ const Book = props => {
       className="book" 
       btns={[
                 {text: '试读章节', target: '_blank', href: 'https://blog.csdn.net/isea533/article/details/73555400'},
-                {text: '资源下载', target: '_blank', href: '添加内部链接'},
+                {text: '资源下载', target: '_blank', href: siteConfig.baseUrl + 'downloads.html'},
                 {text: '京东', target: '_blank', href: 'https://item.jd.com/12103309.html'},
                 {text: '当当', target: '_blank', href: 'http://product.dangdang.com/25098208.html'},
                 {text: '亚马逊', target: '_blank', href: 'https://www.amazon.cn/MyBatis%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A-%E5%88%98%E5%A2%9E%E8%BE%89/dp/B072RC11DM/ref=sr_1_18?ie=UTF8&qid=1498007125&sr=8-18&keywords=mybatis'} 
@@ -437,11 +436,6 @@ class Index extends React.Component {
           <Blog/>
           <MyBatis/>
           <MyBatisBoot/>
-		      <FeatureCallout src={imgUrl('wxgzh.jpg')}/>
-          <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase language={language} />
         </div>
       </div>
     );

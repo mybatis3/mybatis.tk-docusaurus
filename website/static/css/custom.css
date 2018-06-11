@@ -52,7 +52,8 @@
 }
 
 .container .wrapper .donate-list {
-	text-align: center;
+    text-align: center;
+    margin: 0 auto;
 }
 
 /* blog */
@@ -72,4 +73,9 @@
     text-align: center;
     /*font-weight: bold;*/
     /*font-size: 200%;*/
+}
+
+/* samples.js */
+.showcaseSection .prose h1 {
+    line-height: 1.5em;
 }

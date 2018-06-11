@@ -21,8 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'MyBatis' /* title for your website */,
-  tagline: '工具、文档、示例',
+  title: 'MyBatis 工具' /* title for your website */,
+  tagline: '分页插件 PageHelper、通用 Mapper',
   url: 'https://mybatis3.github.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -38,14 +38,17 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: '文档'},
+    // {doc: 'doc1', label: '文档'},
     //{doc: 'doc4', label: 'API'},
-    //{page: 'help', label: 'Help'},
-    {page: 'users', label: '分页插件'},
-    {page: 'users', label: '通用 Mapper'},
-    {page: 'users', label: '示例项目'},
-    {page: 'users', label: '捐赠列表'},
-    {blog: true, label: 'Blog'},
+    // {page: 'help', label: 'Help'},
+    // {page: 'users', label: 'Users'},
+    // {page: '#pagehelper', label: '分页插件'},
+    // {page: '#mapper', label: '通用 Mapper'},
+    {page: 'downloads', label: '资源下载'},
+    {page: 'plugins', label: '其他插件'},
+    {page: 'samples', label: '示例项目'},
+    {page: 'donates', label: '捐赠列表'},
+    //{blog: true, label: 'Blog'},
   ],
 
   // If you have users set above, you add it here:
