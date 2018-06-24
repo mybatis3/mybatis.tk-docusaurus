@@ -16,6 +16,10 @@
 @media only screen and (min-width: 1500px) {
 }
 
+.mainContainer {
+    padding: 0;
+}
+
 @media (max-width: 480px) {
   .headerTitleWithLogo {
     display: block !important;
@@ -92,4 +96,9 @@
     font-weight: bold;
 	text-align: center;
 }
-
+.showcaseSection ol {
+    list-style: none;
+}
+.container .wrapper h2.haveUsed {
+    word-break: normal;
+}

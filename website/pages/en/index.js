@@ -114,8 +114,7 @@ const Block = props => (
 const Pay = props => (
   <Container
     padding={['bottom', 'top']}
-    id="pay"
-    background="light">
+    id="pay">
     <div class="donate"><h2>捐赠</h2></div>
     <div class="donate-content"><h3>项目的发展离不开你的支持，请作者喝杯咖啡吧！</h3></div>
     <GridBlock align="center" contents={[
@@ -138,7 +137,8 @@ const Blog = props => {
   return (
     <Container
       padding={['bottom', 'top']}
-      id="blog">
+      id="blog" 
+      background="light">
       <div class="blog-recommend"><h2>推荐阅读文章</h2></div>
       <GridBlock align="center" contents={[
         {
@@ -187,8 +187,7 @@ const LibInfo = props => {
 const MyBatis = props => {
   return (
     <LibInfo id="mybatis" title="MyBatis 官方内容" 
-             ga="org.mybatis/mybatis" layout="threeColumn"
-             background="light">
+             ga="org.mybatis/mybatis" layout="threeColumn">
       {[
         {
           title: '[源码地址](https://github.com/mybatis/mybatis-3)',
@@ -208,7 +207,8 @@ const MyBatis = props => {
 const MyBatisBoot = props => {
   return (
     <LibInfo id="mybatis" title="Spring Boot Support for MyBatis" 
-             ga="org.mybatis.spring.boot/mybatis-spring-boot" layout="threeColumn">
+             ga="org.mybatis.spring.boot/mybatis-spring-boot" layout="threeColumn"
+             background="light">
       {[
         {
           title: '[源码地址](https://github.com/mybatis/spring-boot-starter)',
@@ -225,8 +225,7 @@ const MyBatisBoot = props => {
 const PageHelper = props => {
   return (
     <LibInfo id="pagehelper" title="分页插件 PageHelper" 
-             ga="com.github.pagehelper/pagehelper" layout="threeColumn"
-             background="light">
+             ga="com.github.pagehelper/pagehelper" layout="threeColumn">
       {[
         {
           title: '源码地址 [GitHub](https://github.com/pagehelper/Mybatis-PageHelper) && [Gitee](https://gitee.com/free/Mybatis_PageHelper)',
@@ -245,7 +244,7 @@ const PageHelper = props => {
 
 const Mapper = props => {
   return (
-    <LibInfo id="mapper" title="通用 Mapper" ga="tk.mybatis/mapper" layout="threeColumn">
+    <LibInfo id="mapper" title="通用 Mapper" ga="tk.mybatis/mapper" layout="threeColumn" background="light">
       {[
         {
           title: '源码地址 [GitHub](https://github.com/abel533/Mapper) && [Gitee](https://gitee.com/free/Mapper)',
@@ -271,100 +270,11 @@ const Mapper = props => {
   );
 }
 
-const FeatureCallout = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
-	<div><img src={props.src}/></div>
-    <h2>微信公众号</h2>
-  </div>
-);
-
-const VersionImg = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
-    <h2>{props.title}</h2>
-    <div>
-	  <img src={props.img_src} />
-    </div>
-  </div>
-);
-
-const LearnHow = props => (
-  <Block background="light">
-    {[
-      {
-        content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Learn How',
-      },
-    ]}
-  </Block>
-);
-
-const TryOut = props => (
-  <Block id="try">
-    {[
-      {
-        content: 'Talk about trying this out',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'left',
-        title: 'Try it Out',
-      },
-    ]}
-  </Block>
-);
-
-const Description = props => (
-  <Block background="dark">
-    {[
-      {
-        content: 'This is another description of how this project is useful',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Description',
-      },
-    ]}
-  </Block>
-);
-
-const Showcase = props => {
-  if ((siteConfig.users || []).length === 0) {
-    return null;
-  }
-  const showcase = siteConfig.users
-    .filter(user => {
-      return user.pinned;
-    })
-    .map((user, i) => {
-      return (
-        <a href={user.infoLink} key={i}>
-          <img src={user.image} alt={user.caption} title={user.caption} />
-        </a>
-      );
-    });
-
-  return (
-    <div className="productShowcaseSection paddingBottom">
-      <h2>{"Who's Using This?"}</h2>
-      <p>This project is used by all these people</p>
-      <div className="logos">{showcase}</div>
-      <div className="more-users">
-        <a className="button" href={pageUrl('users.html', props.language)}>
-          More {siteConfig.title} Users
-        </a>
-      </div>
-    </div>
-  );
-};
-
 const Book = props => {
   return (
     <BlockWithImgAndBtns 
       id="book" 
-      className="book" 
+      className="book lightBackground"
       btns={[
                 {text: '试读章节', target: '_blank', href: 'https://blog.csdn.net/isea533/article/details/73555400'},
                 {text: '资源下载', target: '_blank', href: siteConfig.baseUrl + 'downloads.html'},

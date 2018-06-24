@@ -98,7 +98,7 @@ class Samples extends React.Component {
         <Container padding={['bottom', 'top']} background="light">
           <div className="showcaseSection">
             <div className="prose">
-              <h2>你的项目也使用了 PageHelper 或通用 Mapper ?</h2>
+              <h2 className="haveUsed">你的项目也使用了 PageHelper 或通用 Mapper ?</h2>
             </div>
             <a href="https://github.com/mybatis-book/book/issues/52" target="_blank" className="button">
               添加你的项目
