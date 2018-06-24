@@ -16,6 +16,12 @@
 @media only screen and (min-width: 1500px) {
 }
 
+@media (max-width: 480px) {
+  .headerTitleWithLogo {
+    display: block !important;
+  }
+}
+
 .ewm .blockImage {
     width: 50%;
     max-width: 100%;
@@ -39,11 +45,16 @@
 }
 }
 
+.container .wrapper h2, a {
+	word-break: break-all;
+}
+
 /* donate */
 .container .wrapper .donate h2 {
     text-align: center;
     font-weight: bold;
     font-size: 200%;
+	word-break: break-all;
 }
 
 .container .wrapper .donate-content h3 {
@@ -61,6 +72,7 @@
     text-align: center;
     font-weight: bold;
     font-size: 200%;
+	word-break: break-all;
 }
 
 /* lib */
@@ -68,14 +80,16 @@
     text-align: center;
     font-weight: bold;
     font-size: 200%;
+	word-break: break-all;
 }
 .container .wrapper .version {
     text-align: center;
-    /*font-weight: bold;*/
-    /*font-size: 200%;*/
 }
 
 /* samples.js */
-.showcaseSection .prose h1 {
-    line-height: 1.5em;
+.showcaseSection .prose h2 {
+	font-size: 30px;
+    font-weight: bold;
+	text-align: center;
 }
+

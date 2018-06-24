@@ -586,23 +586,65 @@ const Users = [
         "way": "支付宝（针对ECharts）", 
         "date": "2017-03-28", 
         "money": "16.88"
+    }, 
+	//2018-06-24 补充下面记录
+    {
+        "name": "*了", 
+        "way": "微信支付", 
+        "date": "2018-02-28", 
+        "money": "20.00"
+    }, 
+    {
+        "name": "c*i", 
+        "way": "微信支付", 
+        "date": "2018-04-27", 
+        "money": "10.00"
+    }, 
+    {
+        "name": "Rocbin", 
+        "way": "微信支付", 
+        "date": "2018-04-29", 
+        "money": "5.00"
+    }, 
+    {
+        "name": "*遥", 
+        "way": "微信支付", 
+        "date": "2018-06-15", 
+        "money": "10.00"
+    }, 
+    {
+        "name": "*在", 
+        "way": "微信支付", 
+        "date": "2018-06-20", 
+        "money": "2.00"
+    }, 
+	//支付宝
+    {
+        "name": "*川", 
+        "way": "支付宝", 
+        "date": "2017-12-01", 
+        "money": "5.00"
+    },
+	{
+        "name": "*恺翔", 
+        "way": "支付宝", 
+        "date": "2017-12-28", 
+        "money": "20.00"
+    },
+	{
+        "name": "*支农", 
+        "way": "支付宝", 
+        "date": "2018-06-16", 
+        "money": "20.00"
     }
 ];
 
+function compareDateStr(date1, date2){
+	return new Date(date1).getTime() - new Date(date2).getTime();
+}
+
 class Samples extends React.Component {
   render() {
-    if ((siteConfig.users || []).length === 0) {
-      return null;
-    }
-    const editUrl = siteConfig.repoUrl + '/edit/master/website/siteConfig.js';
-    const showcase = siteConfig.users.map((user, i) => {
-      return (
-        <a href={user.infoLink} key={i}>
-          <img src={user.image} alt={user.caption} title={user.caption} />
-        </a>
-      );
-    });
-
     return (
       <div className="mainContainer">
         <Pay/>
@@ -622,7 +664,7 @@ class Samples extends React.Component {
                   <th>金额</th>
                 </thead>
                 <tbody>
-                {Users.map(val => {
+                {Users.sort(function(a, b){return -1 * compareDateStr(a.date, b.date);}).map(val => {
                   return (<tr key={val.name + val.way + val.date + val.money}>
                     <td className="name">{val.name}</td>
                     <td className="way">{val.way}</td>

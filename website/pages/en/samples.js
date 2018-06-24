@@ -31,7 +31,7 @@ class Samples extends React.Component {
         <Container padding={['bottom', 'top']}>
           <div className="showcaseSection">
             <div className="prose">
-              <h1>Spring 集成示例</h1>
+              <h2>Spring 集成示例</h2>
               <p>MyBatis 和 Spring 集成示例，只有基础的配置信息，没有任何现成的功能，作为新手入门搭建框架的基础。</p>
             </div>
             <ol>
@@ -51,7 +51,7 @@ class Samples extends React.Component {
         <Container padding={['bottom', 'top']} background="light">
           <div className="showcaseSection">
             <div className="prose">
-              <h1>Spring Boot 集成示例</h1>
+              <h2>Spring Boot 集成示例</h2>
               <p><a href="https://github.com/abel533/MyBatis-Spring-Boot" target="_blank">https://github.com/abel533/MyBatis-Spring-Boot</a></p>
               <p>上面这个项目集成了MyBatis 分页插件和 MyBatis 通用 Mapper。</p>
             </div>
@@ -61,7 +61,7 @@ class Samples extends React.Component {
         <Container padding={['bottom', 'top']}>
           <div className="showcaseSection">
             <div className="prose">
-              <h1>脚手架 Guns</h1>
+              <h2>脚手架 Guns</h2>
               <p>Guns 基于 SpringBoot 全面升级，完美整合 springmvc + shiro + <b>MyBatis 通用 Mapper + 分页插件 PageHelper</b> + beetl!</p>
               <p>本项目 fork 自 stylefeng 的 Guns！</p>
               <p><a href="https://github.com/abel533/guns" target="_blank">https://github.com/abel533/guns</a></p>
@@ -74,7 +74,7 @@ class Samples extends React.Component {
         <Container padding={['bottom', 'top']} background="light">
           <div className="showcaseSection">
             <div className="prose">
-              <h1>响应式开源个人博客foblog</h1>
+              <h2>响应式开源个人博客 foblog</h2>
               <p>响应式开源个人博客（简洁清爽风格，<b>基于通用 Mapper 和 分页插件 PageHelper</b>）。</p>
               <p>项目 Fork 自 FireOct 的 fo-blog。</p>
               <p><a href="https://github.com/abel533/foblog" target="_blank">https://github.com/abel533/foblog</a></p>
@@ -87,7 +87,7 @@ class Samples extends React.Component {
         <Container padding={['bottom', 'top']}>
           <div className="showcaseSection">
             <div className="prose">
-              <h1>icadasCMSJava <br/> CMS 内容管理系统</h1>
+              <h2>icadasCMSJava - CMS 内容管理系统</h2>
               <p>springboot+mybatis+beetl 开发的一款CMS，支持自定义内容模型、模板标签、全文检索、全站静态化等功能。</p>
               <p>用了通用Mapper和分页插件PageHelper。</p>
               <p><a href="https://gitee.com/westboy/CicadasCMS" target="_blank">https://gitee.com/westboy/CicadasCMS</a></p>
@@ -98,7 +98,7 @@ class Samples extends React.Component {
         <Container padding={['bottom', 'top']} background="light">
           <div className="showcaseSection">
             <div className="prose">
-              <h1>你的项目也使用了 <br/>PageHelper <br/>或 <br/> 通用 Mapper ?</h1>
+              <h2>你的项目也使用了 PageHelper 或通用 Mapper ?</h2>
             </div>
             <a href="https://github.com/mybatis-book/book/issues/52" target="_blank" className="button">
               添加你的项目
