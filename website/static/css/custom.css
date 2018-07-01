@@ -53,6 +53,10 @@
 	word-break: break-all;
 }
 
+.book-info {
+    font-weight: bold;
+}
+
 /* donate */
 .container .wrapper .donate h2 {
     text-align: center;

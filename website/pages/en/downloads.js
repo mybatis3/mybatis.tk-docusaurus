@@ -123,7 +123,13 @@ class Downloads extends React.Component {
         <Container padding={['bottom', 'top']} background="light">
           <div className="showcaseSection">
             <div className="prose">
-              <h1><a href="https://github.com/mybatis-book/book" target="_blank">GitHub 资料<br/>和 Issues 交流</a></h1>
+              <h1><a href="https://github.com/mybatis-book/book" target="_blank">在线资源<br/>Issues 交流</a></h1>
+              <p className="book-info">在线资源包含项目数据库 SQL 和备份，simple 初始项目和完整项目，<br/>Spring 和 Spring Boot 集成项目。</p>
+              <img src={imgUrl('book-github.png')}/>
+              <p>地址：<a href="https://github.com/mybatis-book/book" target="_blank">https://github.com/mybatis-book/book</a></p>
+              <p className="book-info">阅读本书过程中，如果遇到问题或者发现错误，<br/>可以通过 Issues 方式进行交流。</p>
+              <img src={imgUrl('book-issues.png')}/>
+              <p>地址：<a href="https://github.com/mybatis-book/book/issues" target="_blank">https://github.com/mybatis-book/book/issues</a></p>
             </div>
           </div>
         </Container>
@@ -134,6 +140,7 @@ class Downloads extends React.Component {
               <h1>百度网盘下载</h1>
               <p>链接：<a href="https://pan.baidu.com/s/1xDTb_-ObVfd7Q4Ffs_sWjw" target="_blank">https://pan.baidu.com/s/1xDTb_-ObVfd7Q4Ffs_sWjw</a></p>
               <p>密码：bp7i</p>
+              <img src={imgUrl('book-resources.png')}/>
             </div>
           </div>
         </Container>
