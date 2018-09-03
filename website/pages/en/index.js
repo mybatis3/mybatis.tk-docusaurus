@@ -193,10 +193,10 @@ const MyBatis = props => {
           title: '[源码地址](https://github.com/mybatis/mybatis-3)',
           content: '想要更近一步，尝试看看源码'
         },{
-          title: '[官方文档](http://mybatis.github.io/mybatis-3/index.html)',
+          title: '[官方文档](http://www.mybatis.org/mybatis-3/zh/index.html)',
           content: '如果使用最新版本，建议看英文文档，中文文档也推荐看'
         },{
-          title: '[MyBatis Spring 官方文档](https://mybatis.github.io/spring/index.html)',
+          title: '[MyBatis Spring 官方文档](http://www.mybatis.org/spring/index.html)',
           content: '和 Spring 集成的文档，包含很多细节'
         },
       ]}
