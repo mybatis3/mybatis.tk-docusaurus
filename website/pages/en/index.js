@@ -163,8 +163,22 @@ const Blog = props => {
   );
 }
 
+const Version = props => {
+  var base = "https://maven-badges.herokuapp.com/maven-central/";
+  return (
+    <div class="version">
+      <div class="version-title"><h4>{props.ga}</h4></div>
+      <div class="version-img">
+        <a href={base + props.ga}>
+        <img src={base + props.ga + "/badge.svg"} alt="Maven central"/></a>
+      </div>
+    </div>
+  );
+}
+
 const LibInfo = props => {
-  var href = "https://maven-badges.herokuapp.com/maven-central/" + props.ga;
+  var base = "https://maven-badges.herokuapp.com/maven-central/";
+  var href = base + props.ga;
   var imgSrc = href + "/badge.svg";
   return (
     <Container
@@ -172,13 +186,10 @@ const LibInfo = props => {
       background={props.background}
       id={props.id}>
       <div class="lib-title"><h2>{props.title}</h2></div>
-      <div class="version">
-        <div class="version-title"><h4>当前版本</h4></div>
-        <div class="version-img">
-          <a href={href}>
-          <img src={imgSrc} alt="Maven central"/></a>
-          </div>
-      </div>
+      <Version ga={props.ga}/>
+      {props.starter != undefined ? (
+          <Version ga={props.starter}/>
+        ): ""}
       <GridBlock align="center" contents={props.children} layout={props.layout} className={props.id}/>
     </Container>
   );
@@ -225,6 +236,7 @@ const MyBatisBoot = props => {
 const PageHelper = props => {
   return (
     <LibInfo id="pagehelper" title="分页插件 PageHelper" 
+             starter="com.github.pagehelper/pagehelper-spring-boot-starter"
              ga="com.github.pagehelper/pagehelper" layout="threeColumn">
       {[
         {
@@ -244,7 +256,7 @@ const PageHelper = props => {
 
 const Mapper = props => {
   return (
-    <LibInfo id="mapper" title="通用 Mapper" ga="tk.mybatis/mapper" layout="threeColumn" background="light">
+    <LibInfo id="mapper" title="通用 Mapper" starter="tk.mybatis/mapper-spring-boot-starter" ga="tk.mybatis/mapper" layout="threeColumn" background="light">
       {[
         {
           title: '源码地址 [GitHub](https://github.com/abel533/Mapper) && [Gitee](https://gitee.com/free/Mapper)',

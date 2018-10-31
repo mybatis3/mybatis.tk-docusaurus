@@ -61,6 +61,19 @@ class Samples extends React.Component {
         <Container padding={['bottom', 'top']}>
           <div className="showcaseSection">
             <div className="prose">
+              <h2>spring-boot-api-project-seed</h2>
+              <h3>作者: <a href="https://github.com/lihengming" target="_blank">lihengming</a></h3>
+              <p>🌱🚀一个基于Spring Boot & MyBatis的种子项目，用于快速构建中小型API、RESTful API项目~</p>
+              <p>Spring Boot API Project Seed 是一个基于Spring Boot & MyBatis的种子项目，用于快速构建中小型API、RESTful API项目，该种子项目已经有过多个真实项目的实践，稳定、简单、快速，使我们摆脱那些重复劳动，专注于业务代码的编写，减少加班。下面是一个简单的使用演示，看如何基于本项目在短短几十秒钟内实现一套简单的API，并运行提供服务。</p>
+              <p><a href="https://github.com/lihengming/spring-boot-api-project-seed" target="_blank">https://github.com/lihengming/spring-boot-api-project-seed</a></p>
+            </div>
+          </div>
+        </Container>
+
+
+        <Container padding={['bottom', 'top']} background="light">
+          <div className="showcaseSection">
+            <div className="prose">
               <h2>脚手架 Guns</h2>
               <p>Guns 基于 SpringBoot 全面升级，完美整合 springmvc + shiro + <b>MyBatis 通用 Mapper + 分页插件 PageHelper</b> + beetl!</p>
               <p>本项目 fork 自 stylefeng 的 Guns！</p>
@@ -71,7 +84,7 @@ class Samples extends React.Component {
         </Container>
 
 
-        <Container padding={['bottom', 'top']} background="light">
+        <Container padding={['bottom', 'top']}>
           <div className="showcaseSection">
             <div className="prose">
               <h2>响应式开源个人博客 foblog</h2>
@@ -84,7 +97,7 @@ class Samples extends React.Component {
         </Container>
 
 
-        <Container padding={['bottom', 'top']}>
+        <Container padding={['bottom', 'top']} background="light">
           <div className="showcaseSection">
             <div className="prose">
               <h2>icadasCMSJava - CMS 内容管理系统</h2>
@@ -95,7 +108,7 @@ class Samples extends React.Component {
           </div>
         </Container>
 
-        <Container padding={['bottom', 'top']} background="light">
+        <Container padding={['bottom', 'top']}>
           <div className="showcaseSection">
             <div className="prose">
               <h2 className="haveUsed">你的项目也使用了 PageHelper 或通用 Mapper ?</h2>
