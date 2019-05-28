@@ -81,7 +81,7 @@ class HomeSplash extends React.Component {
           <ProjectTitle />
           <ButtonGroup>
             {[
-              {text: '加入QQ群（674264017）', target: '_blank', href: 'http://shang.qq.com/wpa/qunwpa?idkey=c36b92f02329b7d2f6510dc351a74becf602835956d57e8a92d229885673c310'}
+              {text: '加入QQ群（211286137）', target: '_blank', href: 'http://shang.qq.com/wpa/qunwpa?idkey=aa4e606cac3f480e04010536bfbd18eba7b3782a015364cd37c0d4b930c792a7'}
             ]}
           </ButtonGroup>
         </div>
